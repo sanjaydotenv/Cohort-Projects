@@ -1,0 +1,835 @@
+/* @font-face {
+  font-family: "primary";
+  src: url(assets/remixicon.woff2);
+} */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+main {
+  width: 100%;
+  height: 800vh;
+  background-color: #ffffff;
+}
+
+nav {
+  height: 16vh;
+  width: 100%;
+}
+.navbar {
+  height: 100%;
+  padding: 0rem 8rem 0rem 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar img {
+  width: 6em;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.left-nav span {
+  background-color: #ecded4;
+  padding: 0.3em;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.nav-right {
+  display: flex;
+  gap: 3em;
+  font-size: 1em;
+  text-decoration: none;
+  align-items: center;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+.nav-right a::after {
+  content: "";
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.5s ease;
+}
+
+.nav-right a:hover::after {
+  width: 100%;
+}
+
+.nav-right span {
+  background-color: #efdfd5;
+  border-radius: 50%;
+  padding: 0em 0.3em;
+}
+
+.nav-right button {
+  padding: 1em 1.5em;
+  border-radius: 5em;
+  border: 1px solid black;
+  background-color: transparent;
+}
+
+.center-hero {
+  width: 100%;
+  margin-top: 10rem;
+  padding-bottom: 9rem;
+}
+
+.hero-div {
+  padding: 0rem 8rem;
+}
+
+.center-hero button {
+  display: block;
+}
+
+.center-hero h4 {
+  font-size: 6rem;
+  font-weight: 500;
+  line-height: 5.5rem;
+}
+
+.center-hero p {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+}
+
+.center-hero button {
+  font-size: 1rem;
+  margin-top: 1.8rem;
+  padding: 1rem 2rem;
+  background-color: black;
+  color: white;
+  border-radius: 2rem;
+}
+
+.page2 {
+  width: 100%;
+  height: 100vh;
+}
+
+.marquee {
+  width: 100%;
+  height: 5vw;
+  background-color: white;
+  overflow: hidden;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.imgs {
+  height: 100%;
+  width: max-content;
+
+  display: flex;
+  align-items: center;
+
+  flex-shrink: 0;
+
+  animation: scrol 10s linear infinite;
+}
+
+.imgs img {
+  margin-left: 120px;
+  height: 2rem;
+}
+
+.marquee::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 8%;
+  height: 100%;
+
+  background-color: white;
+
+  z-index: 2;
+}
+
+.marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 8%;
+  height: 100%;
+
+  background-color: white;
+
+  z-index: 2;
+}
+
+@keyframes scrol {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+.cards {
+  padding: 3rem 8rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #f5f4f4;
+  height: 36vh;
+  width: 17%;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: .5rem;
+}
+
+.card h2 {
+  font-weight: 400;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+
+.bottom-page2 {
+  padding: 0rem 8rem;
+  margin-top: 8rem;
+}
+.line {
+  width: 100%;
+  height: 0.1rem;
+  background-color: #eeeff0;
+  margin-top: 0.5rem;
+}
+
+.page3 {
+  width: 100%;
+  height: 100vh;
+}
+
+.page-3-nav {
+  width: 100%;
+  height: 16vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 8rem 0rem 8rem;
+  box-sizing: border-box;
+}
+
+.page-3-nav h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.page-3-nav button {
+  padding: 1em 1.5em;
+  border-radius: 5em;
+  border: 1px solid black;
+  background-color: transparent;
+}
+
+.page-3-cards {
+  height: 150vh;
+  padding: 0rem 8rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.page-3-card {
+  width: 48%;
+  height: 62vh;
+  border-radius: .5rem;
+}
+
+.page-3-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s ease;
+}
+
+.page-3-img-parent {
+  overflow: hidden;
+}
+
+.page-3-card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: .3rem;
+}
+
+.page-3-card-bottom h4 {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.page-3-card-bottom button {
+  padding: 0.5em 1em;
+  border-radius: 5em;
+  border: 1px solid black;
+  background-color: transparent;
+}
+
+.page-3-card img:hover {
+  transform: scale(1.2);
+  transition: transform 1s ease;
+}
+
+.page-3-bottom {
+  padding:0rem 8rem;
+}
+
+.page4 {
+  margin-top: 75vh;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem 8rem;
+  box-sizing: border-box;
+}
+
+.page-4-cards {
+  display: flex;
+  gap: 2rem;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.page-4-card {
+  width: 20%;
+  height: 40vh;
+  background-color: #f1f4f8;
+  padding: 2rem;
+}
+
+.page-4-card h4 {
+  margin-top: 2rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.page-4-card button {
+  margin-top: 6rem;
+  padding: 1rem 2rem;
+  border: none;
+  background-color: #010100;
+  color: white;
+  border-radius: 2rem;
+}
+
+
+.page-4-card-v2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+   width: 20%;
+  height: 40vh;
+  background-color: #f0f7f5;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+
+.page-4-card-v2 p:first-child {
+  font-size: 1.2rem;
+}
+
+.page-4-card-v2 p:nth-child(2) {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.page-4-card-v2-m {
+  display: flex;
+  gap: 2.3rem;
+  width: 100rem;
+  height: 100%;
+  margin-left: 21.8rem;
+}
+
+.page-4-card-v2-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px;
+  height: 40vh;
+  background-color: #f8f8f8;
+  padding: 2rem;
+  text-transform: uppercase;
+}
+
+.page-4-card-v2-m > :nth-child(1) {
+  background-color: #f8f8f8;
+}
+.page-4-card-v2-m  p:nth-child(2) {
+  font-size: 1.2rem;
+}
+
+
+.page-4-card-v2-m > :nth-child(2) {
+  background-color: #f8ece2;
+}
+
+
+.page-4-card-v2-m > :nth-child(3) {
+  background-color: #fffbe6;
+}
+
+.page5 {
+  margin-top: 10rem;
+  width: 100%;
+  height: 100vh;
+ 
+}
+
+.page-5-div-center {
+  display: flex;
+  align-items: center;
+  padding: 1rem 10rem;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.page5 h4 {
+  font-size: 3rem;
+  font-weight: 400;
+  width: 50%;
+  text-align: center;
+  text-align: start;
+}
+
+.page-5-div {
+  margin-top: 2rem;
+  width: 50%;
+  display: flex;
+  gap: 3rem;
+}
+
+.page-5-div p {
+  font-size: 1rem;
+  line-height: 1.7rem;
+}
+
+.page-5-bottom {
+  margin-top: 10rem;
+  font-weight: 400;
+  padding: 0rem 8rem;
+}
+
+
+.page6 {
+  height: 100vh;
+  width: 100%;
+  padding: 1rem 8rem;
+  box-sizing: border-box;
+}
+
+.page-6-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.page6 h2 {
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+
+.page-6-nav button {
+  padding: 1em 1.5em;
+  border-radius: 5em;
+  border: 1px solid black;
+  background-color: transparent;
+}
+
+
+.page-6-center-div {
+  height: 100%;
+  width: 100%;
+  padding-top: 5rem;
+}
+
+.page-6-card {
+  height: 60vh;
+  width: 20%;
+  background-color: #f0f7f5;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.page-6-cards-div {
+  display: flex;
+  gap: 2rem;
+}
+
+.page-6-card button {
+  margin-top: 3rem;
+  display: inline-block;
+  width: 7rem;
+  padding: 1rem;
+  border: none;
+  background-color: #010100;
+  color: white;
+  border-radius: 2rem;
+}
+
+.page-6-card-div-v2 {
+  height: 60vh;
+  width: 24%;
+}
+
+.page-6-img-div {
+  height: 90%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-6-img-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+
+.page-6-card-bottom {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.page-6-card-bottom h4 {
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.page-6-card-bottom button {
+  padding: .3rem 1.2em;
+  border-radius: 5em;
+  border: 1px solid black;
+  background-color: transparent;
+}
+
+.icons {
+  font-size: 2rem;
+  display: flex;
+  gap: 1rem;
+  width: fit-content;
+  position: absolute;
+  bottom: 5%;
+  right: 8%;
+}
+
+.icons i {
+  transform: translateY(60px);
+  transition: transform 0.5s ease;
+}
+
+.page-6-img-div:hover i {
+  transform: translateY(10px);
+}
+
+
+.page7 {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.page-7-left-div {
+  width: 30%;
+  height: 100%;
+  display: flex;
+}
+
+.page-7-right-div {
+  width: 55vw;
+  display: flex;
+  gap: 5rem;
+}
+
+
+.page-7-div-text-area {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.page-7-div-text-area h4 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.page-7-div-text-area p {
+  font-size: .9rem;
+  line-height: 1.2rem;
+}
+
+.page-7-img-div img {
+  margin-top: 1rem;
+}
+
+.page-7-left-text-area-control {
+  width: 60%;
+  padding: 0rem 5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+
+.page8 {
+  height: 100vh;
+  width: 100%;
+  padding: 5rem;
+  box-sizing: border-box;
+}
+
+.page-8-div {
+  height: 100%;
+  width: 100%;
+  background-color: #f0f7f5;
+  display: flex;
+  padding: 4rem;
+  box-sizing: border-box;
+  gap: 15rem;
+}
+
+.page-8-text-area-div {
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.page-8-text-area-div h4 {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 5rem;
+}
+
+
+.page-8-text-area-div p {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+}
+
+.page-8-text-area-div button {
+  width: 180px;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border: none;
+  background-color: #010100;
+  color: white;
+  border-radius: 2rem;
+}
+
+.page-8-bottom-div {
+  margin-top: 3rem;
+  gap: 1rem;
+  align-items: center;
+}
+.page9 {
+  height: 85vh;
+  width: 100%;
+  margin-top: 20px;
+  padding: 5rem;
+  box-sizing: border-box;
+}
+
+.page-9-nav-div {
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.page-9-nav-div h4 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.page-9-nav-div button {
+  padding: 1em 1.5em;
+  border-radius: 5em;
+  border: 1px solid black;
+  background-color: transparent;
+  color: black;
+}
+
+.page-9-cards-div {
+  height: 100vh;
+  width: 100%;
+  padding: 3rem;
+  box-sizing: border-box;
+  display: flex;
+  gap: 1rem;
+}
+
+.page-9-card-div {
+  width: 25%;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+}
+
+.page-9-card-img-div {
+  height: 80%;
+  width: 100%;
+  background-color: pink;
+  overflow: hidden;
+}
+
+.page-9-card-img-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 1s ease;
+}
+
+.page-9-card-img-div:hover img {
+  transform: scale(1.2);
+  
+}
+
+.page10 {
+  height: 70vh;
+  width: 100%;
+  padding: 0rem 8rem;
+  box-sizing: border-box;
+  display: flex;
+  gap: 15rem;
+  position: relative;
+}
+
+.page-10-logo {
+  margin-top: 2rem;
+}
+
+.page-10-list-items {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.page-10-list-items p {
+  font-size: 1.2rem;
+}
+
+.page-10-list-items a {
+  text-decoration: none;
+  color: black;
+  font-size: .8rem;
+  text-transform: capitalize;
+}
+
+.page-10-list {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-10-list-items button {
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  border: none;
+  background-color: #010100;
+  color: white;
+  border-radius: 2rem;
+}
+
+.page-10-list-items a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+}
+.page-10-list-items a:hover::after {
+  width: 23%;
+  transition: width .5s ease;
+}
+
+.page-bottom- {
+  height: 3px;
+  width: 90%;
+  background-color: #f5f4f4;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.page-bottom- div {
+  display: flex;
+  gap: 2rem;
+  opacity: .5;
+}
+
+.page-bottom- div p {
+  font-size: .8rem;
+
+  margin-top: .5rem;
+}
+
+.page-bottom- p {
+  margin-top: .5rem;
+}
