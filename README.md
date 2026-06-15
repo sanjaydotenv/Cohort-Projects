@@ -25,7 +25,7 @@ This is a clone of a website; it is responsive and appears to be a site for sell
 - HTML5
 - CSS3
 
-Live link: https://sanjaydotenv.github.io/Cohort-Projects/Project-1/
+Live link: https://sanjaydotenv.github.io/Cohort-Projects/Project-2/
 
 ## Author
 
