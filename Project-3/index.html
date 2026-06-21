@@ -4,30 +4,97 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>E-comm</title>
   </head>
   <body>
     <main>
       <div class="nav-bar">
-        <h1>E-comm</h1>
-        <button class="createBtn">Create</button>
+        <div class="nav-left">
+          <h1>E-comm</h1>
+          <input class="search-bar" type="text" placeholder="Search..." />
+        </div>
+        <div class="nav-right">
+          <i class="ri-notification-line"></i>
+          <button>Create</button>
+        </div>
       </div>
-      <div class="products">
+
+      <div class="products-section">
+        <div class="products-nav">
+          <div class="product-nav-left">
+            <h1>Products</h1>
+            <p>Manage and track all your products from one place.</p>
+          </div>
+          <div class="product-nav-right">
+            <button class="category-drop-down">
+              <h4 style="display: inline" class="category-h1">Category</h4>
+              <span><i class="ri-arrow-up-long-line iconsrotate"></i></span>
+            </button>
+            <div class="list">
+              <h4>Fashion</h4>
+              <h4>Beauty</h4>
+              <h4>Electronic</h4>
+              <h4>Shoes</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="products">
+          <div class="product-name-nav">
+            <h4>Product Name</h4>
+            <h4>Category</h4>
+            <h4>Price</h4>
+            <h4>Action</h4>
+          </div>
+
+          <div class="actual-product"></div>
+        </div>
       </div>
 
       <div class="form-container">
+        <h2>Add Product</h2>
+
         <form>
-          <h2>Create Product</h2>
+          <div class="input-group">
+            <label>Product Name</label>
+            <input type="text" placeholder="Enter product name" />
+          </div>
 
-          <input type="text" placeholder="Product Name" />
+          <div class="input-group">
+            <label>Price</label>
+            <input type="number" placeholder="Enter price" />
+          </div>
 
-          <textarea placeholder="Product Description"></textarea>
+          <div class="input-group">
+            <label>Image</label>
+            <input type="text" placeholder="Enter Image url" />
+          </div>
 
-           <input type="text" placeholder="Image URL" />
-
-          <button class="SBtn" type="submit">Create Product</button>
+          <button type="submit">Create Product</button>
         </form>
       </div>
+
+      <div class="delete-popup">
+        <div class="popup-box">
+          <h3>Delete Product</h3>
+          <p>Are you sure you want to delete this product?</p>
+
+          <div class="popup-btns">
+            <button class="cancel-btn">Cancel</button>
+            <button class="delete-btn">Delete</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-modal">
+      
+</div>
+
+<div class="flash-msg"></div>
     </main>
     <script src="script.js"></script>
   </body>
