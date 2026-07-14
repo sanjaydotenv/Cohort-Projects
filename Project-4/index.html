@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>CashPilot</title>
+  </head>
+  <body>
+    <div  id="Register-page">
+      <form class="register-form" action="">
+        <div  class="register-heading">
+          <h1>Register</h1>
+          <p>Welcome To System Hang</p>
+        </div >
+        <div  class="input-group-1">
+          <label for="">Username</label>
+          <input type="text" placeholder="Enter Your Username" />
+        </div >
+        <div  class="input-group-1">
+          <label for="">Password</label>
+          <input type="text" placeholder="Enter Your Password" />
+        </div >
+        <div  class="input-group-1">
+          <label for="">Profile Picture</label>
+          <input type="text" placeholder="Enter Your Profile Picture" />
+        </div >
+        <div  class="register-btn-container">
+          <button class="register-btn">Register</button>
+          <p>You have an Account? <span class="login-span">Login</span></p>
+        </div >
+      </form>
+    </div >
+
+    <div  id="Login-Page">
+      <form class="login-form" action="">
+        <div  class="register-heading">
+          <h1>Login</h1>
+          <p>Welcome To System Hang</p>
+        </div >
+        <div  class="input-group-1">
+          <label for="">Username</label>
+          <input type="text" placeholder="Enter Your Username" />
+        </div >
+        <div  class="input-group-1">
+          <label for="">Password</label>
+          <input type="text" placeholder="Enter Your Password" />
+        </div >
+        <div  class="register-btn-container">
+          <button class="login-btn">Login</button>
+          <p>
+            You don't have an Account?
+            <span class="register-span">Register</span>
+          </p>
+        </div >
+      </form>
+    </div >
+
+    <div  id="Dashboard-Page">
+      <div  class="menu-bar light">
+        <div  class="logo-container">
+          <div  class="logo-img">
+            <img class="logo" src="logo.png" alt="" />
+          </div >
+          <div  class="logo-dets">
+            <h2>CashPilot</h2>
+            <p>Track. Plan. Grow.</p>
+          </div >
+        </div >
+
+        <div  class="dashboard">
+          <i class="ri-layout-grid-fill"></i>
+          <h2>Dashboard</h2>
+        </div >
+
+        <div  class="setting">
+          <i class="ri-settings-4-fill"></i>
+          <h2>Settings</h2>
+        </div >
+
+        <div  class="user-profile">
+          <div  class="profile-wrapper">
+            <div  class="profile-img">
+            <img class="profile-img-tag" src="logo.png" alt="" />
+          </div >
+          <div  class="profile-name">
+            <h4 class="profile-name-h4">Mayur Bairagi</h4>
+            <p>Welcome to CashPilot</p>
+          </div >
+          <div  class="profile-down-arrow">
+            <i class="ri-arrow-down-s-fill up-down-profile"></i>
+          </div >
+          </div >
+
+          <div  class="profile-btns hide-btns-profile">
+          <button class="resetalldata">Rest all data</button>
+          <button class="logout-btn">Logout</button>
+          </div >
+        </div >
+      </div >
+
+      <div  class="main">
+        <div  class="nav-bar light">
+          <div  class="nav-bar-heading">
+            <h1 class="nav-bar-name-h1">Hello, Mayur 👋</h1>
+            <p>Here's your financial overview for today.</p>
+          </div >
+          <div  class="add-transaction">
+            <button class="create-tran-btn"><i class="ri-add-line"></i> Add Transaction</button>
+            <div  class="theme-btn">
+              <div  class="theme-toggle">
+                <span class="moon">🌙</span>
+
+                <div  class="toggle-ball"></div >
+
+                
+                <span class="sun">☀️</span>
+              </div >
+            </div >
+          </div >
+        </div >
+
+        <div  class="content light">
+
+          
+        </div >
+      </div >
+    </div >
+
+
+    <div  class="create-Page">
+      <div  class="create-form">
+        <div  class="create-heading">
+          <i class="ri-arrow-left-fill back-tran"></i>
+          <h1>Add Transaction</h1>
+          <p>Welcome To System Hang</p>
+        </div >
+        <form class="create-transaction-form" action="">
+        <div  class="input-group">
+          <label for="">Transaction Type</label>
+          <select class="transactionSelect" name="transactionSelect" id="">
+            <option value="Income">Income</option>
+            <option value="Expense">Expense</option>
+          </select>
+        </div >
+        <div  class="input-group">
+          <label for="">Category</label>
+          <input type="text" placeholder="Enter Your Category" />
+        </div >
+        <div  class="input-group">
+          <label for="">Amount</label>
+          <input type="text" placeholder="Enter Your Amount" />
+        </div >
+        <div  class="input-group">
+          <label for="">Date</label>
+          <input type="date" placeholder="Enter Your Date" />
+        </div >
+        <div  class="register-btn-container">
+          <button class="create-btn">Add Transaction</button>
+        </div >
+        </form>
+      </div >
+    </div >
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
