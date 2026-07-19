@@ -312,6 +312,10 @@ body {
   font-size: 12px;
   color: rgb(223, 216, 216);
 }
+.for {
+  display: flex;
+  gap: 5px;
+}
 
 .profile-down-arrow {
   display: flex;

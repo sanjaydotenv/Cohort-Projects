@@ -18,16 +18,11 @@ const create_transaction_btn = document.querySelector(".create-tran-btn");
 const create_transaction_form = document.querySelector(
   ".create-transaction-form",
 );
-let profileNameh4 = document.querySelector(".profile-name-h4");
 let navBarNameh1 = document.querySelector(".nav-bar-name-h1");
 const resetAllData = document.querySelector(".resetalldata");
-const profileImgTag = document.querySelector(".profile-img-tag");
+const profileWrapper = document.querySelector(".profile-wrapper");
 
-
-const users = JSON.parse(localStorage.getItem("UsersData"));
-
-profileImgTag.src = users?.[0]?.picture || "";
-
+const users = JSON.parse(localStorage.getItem("UsersData")) || [];
 
 let IsLoginOrRegisterOrDashboard = localStorage.getItem(
   "IsLoginOrRegisterOrDashboard",
@@ -49,6 +44,27 @@ let CurrentPage = () => {
   }
 };
 CurrentPage();
+
+const RenderProfile = () => {
+  const users = JSON.parse(localStorage.getItem("UsersData")) || [];
+  if (users.length === 0) return;
+
+  const { username } = users[0];
+  const user = users[0];
+  const picture = user.picture || "logo.png";
+
+  navBarNameh1.textContent = `${username}👋`;
+
+  profileWrapper.innerHTML = `<div  class="profile-img">
+            <img class="profile-img-tag" src="${picture}" alt="" />
+          </div >
+          <div class="profile-name">
+            <h4 class="profile-name-h4">${username}</h4>
+            <p>Welcome to CashPilot</p>
+          </div >`;
+};
+
+RenderProfile();
 
 resetAllData.addEventListener("click", () => {
   UsersTransaction = [];
@@ -83,8 +99,6 @@ registerForm.addEventListener("submit", (e) => {
     picture,
   };
 
-  profileImgTag.src = picture;
-
   Users.push(user);
 
   localStorage.setItem("UsersData", JSON.stringify(Users));
@@ -95,6 +109,7 @@ registerForm.addEventListener("submit", (e) => {
     IsLoginOrRegisterOrDashboard,
   );
   CurrentPage();
+  RenderProfile();
 });
 
 loginForm.addEventListener("submit", (e) => {
@@ -148,7 +163,6 @@ logoutBtn.addEventListener("click", () => {
 upDownArrow.addEventListener("click", () => {
   profileBtn.classList.toggle("hide-btns-profile");
   upDownArrow.style.rotate = "180deg";
-
 });
 
 back_transaction.addEventListener("click", () => {
@@ -184,11 +198,6 @@ calculateTotals();
 let userData = JSON.parse(localStorage.getItem("UsersData")) || [];
 
 let RenderUI = () => {
-  userData.forEach((user) => {
-    profileNameh4.textContent = user.username;
-    navBarNameh1.textContent = user.username + "👋";
-  });
-
   content.innerHTML = `<div  class="top-cards">
             <div  class="balance-card ">
               <div  class="balance-top">
@@ -298,7 +307,6 @@ create_transaction_form.addEventListener("submit", (e) => {
   RenderUI();
   createCharts();
 });
-
 
 function createCharts() {
   const ctx = document.getElementById("incomeExpenseChart");
