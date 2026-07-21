@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body class="body">
+    <div class="toast" id="toast">
+      <i class="fa-solid fa-circle-check"></i>
+      <span id="toastText">Task Added Successfully!</span>
+    </div>
+
+    <div class="confirm-overlay" id="confirmOverlay">
+      <div class="confirm-box">
+        <div class="confirm-icon">
+          <i class="fa-solid fa-trash"></i>
+        </div>
+
+        <h2>Delete Item?</h2>
+
+        <p>
+          Are you sure you want to delete this item? This action cannot be
+          undone.
+        </p>
+
+        <div class="confirm-btns">
+          <button class="cancel-btn" id="cancelDelete">Cancel</button>
+
+          <button class="delete-btn" id="confirmDelete">Delete</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="reset-overlay" id="resetOverlay">
+      <div class="reset-card">
+        <div class="reset-icon">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+
+        <h2>Reset All Data?</h2>
+
+        <p>
+          This will permanently delete all your Todos, Planner, Goals, Pomodoro
+          Settings and Saved Data.
+        </p>
+
+        <p class="warning-text">⚠ This action cannot be undone.</p>
+
+        <div class="reset-btns">
+          <button id="cancelReset" class="cancel-reset">Cancel</button>
+
+          <button id="confirmReset" class="confirm-reset">Yes, Reset</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="papa">
+      <div class="dashboard">
+        <aside class="sidebar">
+          <div class="logo">FocusHub</div>
+
+          <ul>
+            <li class="aside-link-dashboard">
+              <i class="fa-solid fa-house"></i>
+              Dashboard
+            </li>
+
+            <li class="aside-link-todo">
+              <i class="fa-solid fa-list-check"></i>
+              Todo List
+            </li>
+
+            <li class="aside-link-daily-planner">
+              <i class="fa-solid fa-calendar-days"></i>
+              Daily Planner
+            </li>
+
+            <li class="aside-link-promodoro">
+              <i class="fa-solid fa-clock"></i>
+              Pomodoro
+            </li>
+
+            <li class="aside-link-weather">
+              <i class="fa-solid fa-cloud-sun"></i>
+              Weather
+            </li>
+
+            <li class="aside-link-daily-goals">
+              <i class="fa-solid fa-bullseye"></i>
+              Daily Goals
+            </li>
+
+            <li class="aside-link-motivation">
+              <i class="fa-solid fa-quote-left"></i>
+              Motivation
+            </li>
+
+            <li class="aside-link-setting">
+              <i class="fa-solid fa-gear"></i>
+              Settings
+            </li>
+          </ul>
+        </aside>
+
+        <main class="main-page">
+          <header>
+            <h1 id="headinggreeting">Good Morning 👋</h1>
+
+            <button class="theme-btn">
+              <i class="fa-solid fa-moon"></i>
+            </button>
+          </header>
+
+          <section class="cards">
+            <div class="card todo-card">
+              <div class="card-banner">
+                <img src="To do list-amico.png" alt="Todo List" />
+              </div>
+
+              <h2>📋 Todo List</h2>
+
+              <p>Manage your daily tasks and stay organized.</p>
+            </div>
+
+            <div class="card planner-card">
+              <div class="card-banner">
+                <img src="planner.png" alt="Daily Planner" />
+              </div>
+
+              <h2>📅 Daily Planner</h2>
+
+              <p>Plan your day with schedules and priorities.</p>
+            </div>
+
+            <div class="card motivation-card">
+              <div class="card-banner">
+                <img src="motivation.png" alt="Motivation" />
+              </div>
+
+              <h2>💬 Motivation</h2>
+
+              <p>Get inspired with daily motivational quotes.</p>
+            </div>
+
+            <div class="card pomodoro-card">
+              <div class="card-banner">
+                <img src="pomodoro.webp" alt="Pomodoro Timer" />
+              </div>
+
+              <h2>🍅 Pomodoro</h2>
+
+              <p>Boost productivity using focused work sessions.</p>
+            </div>
+
+            <div class="card weather-card">
+              <div class="card-banner">
+                <img src="weather.png" alt="Weather" />
+              </div>
+
+              <h2>🌤 Weather</h2>
+
+              <p>Check today's weather and forecast instantly.</p>
+            </div>
+
+            <div class="card goals-card">
+              <div class="card-banner">
+                <img src="goals.png" alt="Daily Goals" />
+              </div>
+
+              <h2>🎯 Daily Goals</h2>
+
+              <p>Track your goals and measure daily progress.</p>
+            </div>
+
+            <div class="card background">
+              <h2 id="greeting">🌅 Good Morning</h2>
+
+              <h3 id="day">Monday</h3>
+
+              <h4 id="date">21 July 2026</h4>
+
+              <h1 id="time">08:45:32 PM</h1>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <!-- TODO -->
+
+      <div class="todo-page page">
+        <div class="card">
+          <h2>
+            <i class="fa-solid fa-list-check"></i>
+            Todo List
+          </h2>
+
+          <div class="todo-input">
+            <input type="text" placeholder="Add a new task..." id="todoInput" />
+
+            <button id="addTodo">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+
+          <ul class="todo-list">
+            <!-- JS se Tasks aayenge -->
+          </ul>
+        </div>
+      </div>
+
+      <!-- Daily Planner -->
+
+      <div class="card daily-planner-page page">
+        <h2>
+          <i class="fa-solid fa-calendar-days planner-clock"></i>
+          Daily Planner
+        </h2>
+
+        <div class="planner-input">
+          <input type="time" id="plannerTime" />
+
+          <input type="text" id="plannerTask" placeholder="What's your plan?" />
+
+          <button id="plannerBtn">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+
+        <ul class="planner-list"></ul>
+      </div>
+
+      <!-- Pomodoro -->
+
+      <div class="card pomodoro-card-page page">
+        <h2>
+          <i class="fa-solid fa-clock"></i>
+          Pomodoro Timer
+        </h2>
+
+        <div class="timer-circle">
+          <h1 id="timer">25:00</h1>
+
+          <span>Focus Time</span>
+        </div>
+
+        <div class="timer-buttons">
+          <button class="start-btn">
+            <i class="fa-solid fa-play"></i>
+            Start
+          </button>
+
+          <button class="pause-btn">
+            <i class="fa-solid fa-pause"></i>
+            Pause
+          </button>
+
+          <button class="reset-btn">
+            <i class="fa-solid fa-rotate-left"></i>
+            Reset
+          </button>
+        </div>
+
+        <div class="timer-mode">
+          <button id="default" class="active">Focus</button>
+
+          <button id="shortBtn">Short Break</button>
+
+          <button id="longBtn">Long Break</button>
+        </div>
+      </div>
+
+      <!-- Weather -->
+
+      <div class="card weather-card-page page"></div>
+
+      <!-- Daily Goals -->
+
+      <div class="card goals-card-page page">
+        <h2>
+          <i class="fa-solid fa-bullseye"></i>
+          Daily Goals
+        </h2>
+
+        <div class="goal-input">
+          <input
+            type="text"
+            id="goalInput"
+            placeholder="Add your daily goal..."
+          />
+
+          <button id="goalBtn">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </div>
+
+        <ul class="goal-list"></ul>
+
+        <div class="goal-progress">
+          <div class="progress-info">
+            <span>Progress</span>
+
+            <span id="goalnooftask">0 / 0</span>
+          </div>
+
+          <div class="progress-bar">
+            <div class="progress-fill"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Motivation -->
+
+      <div class="card quote-card-page page">
+        <h2>
+          <i class="fa-solid fa-quote-left"></i>
+          Motivation
+        </h2>
+
+        <div class="quote-box"></div>
+
+        <button class="quote-btn">
+          <i class="fa-solid fa-rotate"></i>
+
+          New Quote
+        </button>
+      </div>
+
+      <!-- Setting -->
+
+      <div class="card settings-card-page page">
+        <h2>
+          <i class="fa-solid fa-gear"></i>
+          Settings
+        </h2>
+
+        <!-- Appearance -->
+
+        <div class="setting-group">
+          <h3>Appearance</h3>
+
+          <div class="setting-item">
+            <span>
+              <i class="fa-solid fa-moon"></i>
+              Dark Mode
+            </span>
+
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Pomodoro -->
+
+        <div class="setting-group">
+          <h3>Pomodoro</h3>
+
+          <div class="setting-item">
+            <span>🍅 Focus Time</span>
+
+            <input id="pomodoroFocusInp" type="number" value="25" />
+          </div>
+
+          <div class="setting-item">
+            <span>☕ Short Break</span>
+
+            <input id="pomodoroShortInp" type="number" value="5" />
+          </div>
+
+          <div class="setting-item">
+            <span>🌴 Long Break</span>
+
+            <input id="pomodoroLongInp" type="number" value="45" />
+          </div>
+        </div>
+
+        <!-- Weather -->
+
+        <div class="setting-group">
+          <h3>Weather</h3>
+
+          <div class="setting-item">
+            <span>
+              <i class="fa-solid fa-location-dot"></i>
+              City
+            </span>
+
+            <input type="text" placeholder="Enter City" />
+          </div>
+        </div>
+
+        <!-- Data -->
+
+        <div class="setting-group">
+          <h3>Data</h3>
+
+          <button class="danger-btn">
+            <i class="fa-solid fa-trash"></i>
+
+            Clear All Data
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
