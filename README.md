@@ -392,12 +392,7 @@ A simple Flappy Bird style browser game made with plain HTML, CSS and JavaScript
 - Add a proper "Level" system based on score
 - Replace the bird image with an animated sprite (flapping wings)
 
----
-
-## 📌 Notes
-
-- Make sure `bird3.png` is placed in the **same folder** as `index.html`, otherwise the bird image won't show.
-- This is a beginner-friendly project — the code is written to be easy to read and modify.
+Live link: https://sanjaydotenv.github.io/Cohort-Projects/Project-6/ 
 
 ---
 
