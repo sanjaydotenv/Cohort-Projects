@@ -1,50 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bird Game</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<div class="game-container">
-
-    <div class="top-bar">
-        <div class="logo">
-            🎮 Grid Game
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bird Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="top-bar">
+        <div class="logo">🎮 Grid Game</div>
 
         <div class="stats">
-            <div class="card">
-                <span>Score</span>
-                <h2 id="score">0</h2>
-            </div>
+          <div class="card">
+            <span>Score</span>
+            <h2 id="score">0</h2>
+          </div>
 
-            <div class="card">
-                <span>Level</span>
-                <h2>0</h2>
-            </div>
+          <div class="card">
+            <span>Level</span>
+            <h2>0</h2>
+          </div>
 
-            <div class="card">
-                <span>Moves</span>
-                <h2>0</h2>
-            </div>
+          <div class="card">
+            <span>Moves</span>
+            <h2>0</h2>
+          </div>
         </div>
+      </div>
+
+      <div class="bird-container">
+        <div class="bird">
+          <img style="height: 50px" src="bird3.png" alt="Bird" />
+        </div>
+      </div>
+
+      <div class="bottom-bar">
+        <button class="startBtn">▶ Start</button>
+        <button class="restartBtn">🔄 Restart</button>
+      </div>
     </div>
 
-    <div class="bird-container">
-        
-    </div>
-
-    <div class="bottom-bar">
-
-        <button>▶ Start</button>
-        <button>🔄 Restart</button>
-
-    </div>
-
-</div>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

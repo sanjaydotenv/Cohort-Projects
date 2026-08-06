@@ -89,7 +89,64 @@ body{
     height:100%;
     width:100%;
     background: #313846;
+    position: relative;
+    overflow: hidden;
 }
+
+
+.bird img {
+    position: absolute;
+    top: 200px;
+    left: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .bottom-bar{
