@@ -4,7 +4,7 @@ This repository contains my all cohort project's
 
 ## Projects
 
-### Project 01
+# Project 01
 
 This is just a UI project built using vanilla CSS and HTML.
 
@@ -16,7 +16,7 @@ This is just a UI project built using vanilla CSS and HTML.
 Live link: https://sanjaydotenv.github.io/Cohort-Projects/Project-1/
 
 
-### Project 02
+# Project 02
 
 This is a clone of a website; it is responsive and appears to be a site for selling tea or something similar.
 
@@ -28,9 +28,9 @@ This is a clone of a website; it is responsive and appears to be a site for sell
 Live link: https://sanjaydotenv.github.io/Cohort-Projects/Project-2/
 
 
-### Project 03
+# 👩🏻‍💼 Project 03
 
-# Product Management Dashboard
+## Product Management Dashboard
 
 A responsive Product Management Dashboard built using HTML, CSS, and JavaScript. Users can create, update, delete, search, and view product details through a clean and modern interface. Product data is stored in Local Storage, allowing information to persist even after page refreshes.
 
@@ -57,7 +57,7 @@ A responsive Product Management Dashboard built using HTML, CSS, and JavaScript.
 Live link: https://sanjaydotenv.github.io/Cohort-Projects/Project-3/
 
 
-### Project 04
+# 💵 Project 04
 
 
 # 💰 CashPilot
@@ -131,9 +131,9 @@ While building this project, I gained hands-on experience with:
 Live link: https://sanjaydotenv.github.io/Cohort-Projects/Project-4/
 
 
-## Project 05
+# 🤯 Project 05
 
-# 🚀 FocusHub - Productivity Dashboard
+## 🚀 FocusHub - Productivity Dashboard
 
 > A modern productivity dashboard built using **HTML, CSS, and JavaScript**.  
 > FocusHub helps users stay organized, manage daily tasks, track goals, use the Pomodoro technique, and stay motivated—all in one place.
@@ -325,31 +325,93 @@ Live link: https://sanjaydotenv.github.io/Cohort-Projects/Project-5/
 
 ---
 
+# 🐥 Project 06
+
+## 🐦 Bird Game
+
+A simple Flappy Bird style browser game made with plain HTML, CSS and JavaScript. No frameworks, no libraries — just three files.
+
+---
+
+## 🎮 How to Play
+
+1. Open `index.html` in your browser.
+2. Click the **▶ Start** button or press the **Spacebar** to begin.
+3. Press **Spacebar** to make the bird jump up.
+4. Avoid the green pipes and the top/bottom edges of the screen.
+5. Every pipe you pass gives you **+1 score**.
+6. If you hit a pipe or the edge, the game ends and automatically resets so you can try again.
+7. Click **🔄 Restart** anytime to reset the game manually.
+
+---
+
+## 📁 Project Files
+
+| File | What it does |
+|------|---------------|
+| `index.html` | The page structure — score card, bird, buttons |
+| `style.css` | All the visual styling (colors, layout, glass effect) |
+| `script.js` | All the game logic (movement, pipes, collision, score) |
+
+---
+
+## 🕹️ Controls
+
+| Key / Button | Action |
+|--------------|--------|
+| `Spacebar` | Jump / Start the game |
+| `▶ Start` button | Start the game |
+| `🔄 Restart` button | Reset everything |
+
+---
+
+## ⚙️ How the Game Works (Simple Explanation)
+
+- **Gravity:** The bird keeps moving down a little bit every few milliseconds, just like real gravity.
+- **Jump:** Pressing Space moves the bird up suddenly.
+- **Pipes:** A new pair of pipes (top and bottom) is created every 2 seconds and moves from right to left.
+- **Collision:** The game checks if the bird's box overlaps with a pipe's box. If it does, it's game over.
+- **Score:** Every time the bird successfully passes a pipe without hitting it, the score goes up by 1.
+- **Game Over:** When the bird hits a pipe or touches the top/bottom edge, an alert shows your final score, and the game resets on its own.
+
+---
+
+## 🛠️ Built With
+
+- **HTML5** – Page structure
+- **CSS3** – Styling and glass/blur effect
+- **JavaScript (Vanilla)** – Game logic, no external library used
+
+---
+
+## 🚀 Things You Can Improve Later
+
+- Add a high score that saves even after refresh (using `localStorage`)
+- Add sound effects for jump, score, and game over
+- Increase difficulty (faster pipes) as the score goes up
+- Add a proper "Level" system based on score
+- Replace the bird image with an animated sprite (flapping wings)
+
+---
+
+## 📌 Notes
+
+- Make sure `bird3.png` is placed in the **same folder** as `index.html`, otherwise the bird image won't show.
+- This is a beginner-friendly project — the code is written to be easy to read and modify.
+
+---
+
+Made with 💙 for fun and practice.
+
+
+
+
 
 ## 👨‍💻 Author
 
 **Sanjay Bairagi**
 
 If you like this project, feel free to ⭐ the repository.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ## Author
